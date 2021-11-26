@@ -79,6 +79,8 @@ boi {
   animation: eject 5s infinite linear;
   transform-origin: 13vmin 25vmin;
   transform: translate3d(-50vmin, -20vmin, 0px) rotate(0turn);
+  z-index: 3;
+
 }
 
 @keyframes eject {
