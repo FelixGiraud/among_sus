@@ -1,18 +1,18 @@
 <html>
   
   <sky>
-      <div id= "mes_burnes">
+      <div class="container">
     <form method="POST" action="bdd.php" id="button-form">
       <input id="name" name="name" placeholder="Ton blaze">
       <div style="display: flex;">
         <!-- J'ai tuÃ© quelqu'un  -->
-        <button name="button" type="button" value="kill" onclick="submitAjaxForm('kill')">Kill</button>
+        <button name="button" type="button" value="kill" onclick="submitAjaxForm('kill')" class = "btn">Kill</button>
         <!-- Je repport -->
-        <button name="button" type="button" value="repport" onclick="submitAjaxForm('repport')">Repport</button>
+        <button name="button" type="button" value="repport" onclick="submitAjaxForm('repport') class = "btn"">Repport</button>
         <!-- J'ai terminÃ© la quete X (comtpeur) -->
-        <button name="button" type="button" value="quete" onclick="submitAjaxForm('quete')">Quete</button>
+        <button name="button" type="button" value="quete" onclick="submitAjaxForm('quete')"class = "btn">Quete</button>
         <!-- Affiche la map (Ã&nbsp; suivre) -->
-        <button name="button" type="button" value="map" onclick="submitAjaxForm('map')">Map</button>
+        <button name="button" type="button" value="map" onclick="submitAjaxForm('map')"class = "btn">Map</button>
       </div>
     </form>
   </div>
