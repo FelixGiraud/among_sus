@@ -11,11 +11,47 @@
         <div class="stars"></div>
         <div class="twinkling"></div> 
        <div class="clouds"></div>
-      <div class="title">
-        <h1>Git</h1>
-      </div>
     </body>
 
+  <div>
+    <form method="POST" action="bdd.php" id="button-form">
+      <input id="name" name="name" placeholder="Ton blaze">
+      <div style="display: flex;">
+        <!-- J'ai tuÃ© quelqu'un  -->
+        <button name="button" type="button" value="kill" onclick="submitAjaxForm('kill')">Kill</button>
+        <!-- Je repport -->
+        <button name="button" type="button" value="repport" onclick="submitAjaxForm('repport')">Repport</button>
+        <!-- J'ai terminÃ© la quete X (comtpeur) -->
+        <button name="button" type="button" value="quete" onclick="submitAjaxForm('quete')">Quete</button>
+        <!-- Affiche la map (Ã&nbsp; suivre) -->
+        <button name="button" type="button" value="map" onclick="submitAjaxForm('map')">Map</button>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Pseudo, le bouton sur le quelle il Ã&nbsp; cliquÃ©, l'heure -->
+  <script>
+  function submitAjaxForm(button) {
+    //alert("EvÃ¨nement de click dÃ©tectÃ©");
+    var frm = $('#button-form'); //Formulaire de la popup
+    var formData = {
+      name: $("#name").val(),
+      button: button,
+    };
+    $.ajax({
+      type: frm.attr('method'),
+      url: frm.attr('action'),
+      data: formData,
+      success: function (response) {
+        console.log(formData);
+        console.log(response);
+      },    
+    });
+  }
+</script>
+  
+   
+  
 <boi>
   <rightleg></rightleg>
   <leftleg></leftleg>
