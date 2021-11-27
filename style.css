@@ -7,9 +7,9 @@
     width : 50%;
     background-color : 11ffee00;
     color : white;
-    
-
-}
+    position : relative; 
+    z-index : 3;
+    }
 
 
 .title h1{
